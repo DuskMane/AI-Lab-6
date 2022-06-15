@@ -1,0 +1,36 @@
+% path predicate 
+% --------------------------------------
+path(X,Y) :- edge(X,Y).
+path(X,Z) :- edge(X,Y), Y \= Z, path(Y,Z).
+
+% TODO: define probabilistic graph with edge/2
+% tip. bobot uses the following names `flying_military_fortress`, 'highway' and 'mall'
+%      for the crucial nodes in the graph
+% --------------------------------------
+
+
+
+% TODO: define decisions with names:
+% - 'go_gas_station'
+% - 'go_near_car'
+% - 'go switch car'
+% --------------------------------------
+
+
+% TODO: define decisions impact on graph 
+% tip. how the decisions changes probabilities on the edges?
+% --------------------------------------
+
+
+% TODO: define utilities for goals
+% - first goal is to reach the `flying_military_fortress` from the `mall`
+%   utility: 100
+% - alternative goal is to reach the `highway` from the `mall`
+%   utility: 50
+% tip 1. use path/2
+% tip 2. bobot uses the following names `flying_military_fortress`, 'highway' and 'mall'
+%        for the crucial nodes in the graph
+% --------------------------------------
+
+
+
