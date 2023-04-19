@@ -1,6 +1,6 @@
 # Probabilistic Models - Probabilistic Graphs
 
-Check [wiki](https://gitlab.com/agh-courses/2021-2022/artificial-intelligence/lab-12-probabilistic-graphs/-/wikis/home) for the the instructions. 
+Check [wiki](https://gitlab.com/agh-courses/2022-2023/ai/wiki-06/-/wikis/home) for the the instructions. 
 
 ## Setup 
 
