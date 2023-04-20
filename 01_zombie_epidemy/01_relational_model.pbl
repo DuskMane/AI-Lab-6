@@ -4,7 +4,7 @@ human(X) :- between(1, 7, X).
 0.25::initially_infected(X) :- human(X).
 
 0.1::bad_air_infection(X) :- human(X).
-\+bad_air_infection(X) :- \+resistant(X).
+\+bad_air_infection(X) :- resistant(X).
 
 0.1::contact(X,Y) :- human(X), human(Y), X \= Y.
 0.6::contact_infected(X) :- contact(X,Y), infected(Y).
