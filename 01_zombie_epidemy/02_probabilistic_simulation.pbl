@@ -1,18 +1,18 @@
-time(T) :- between(0, 7, T).
-human(X) :- between(1, 7, X).
+%time(T) :- between(0, 7, T).
+%human(X) :- between(1, 7, X).
 
-0.05::resistant(X) :- human(X).
-0.25::initially_infected(X) :- human(X).
+%0.05::resistant(X) :- human(X).
+%0.25::initially_infected(X) :- human(X).
 
-0.1::bad_air_infection(X) :- human(X).
-\+bad_air_infection(X) :- resistant(X).
+%0.1::bad_air_infection(X) :- human(X).
+%\+bad_air_infection(X) :- resistant(X).
 
-0.1::contact(X,Y,T) :- human(X), human(Y), X \= Y, time(T).
-0.6::contact_infected(X,T) :- contact(X,Y,T), infected(Y,T).
+%0.1::contact(X,Y,T) :- human(X), human(Y), X \= Y, time(T).
+%0.6::contact_infected(X,T) :- contact(X,Y,T), infected(Y,T).
 
-infected(X, 0) :- initially_infected(X).
-infected(X, T) :- time(T), T > 0, infected(X, T_prev), T_prev =:= T-1.
-infected(X, T) :- time(T), bad_air_infection(X), infected(X, T_prev), T_prev =:= T-1.
-infected(X, T) :- time(T), contact_infected(X, T).
-
-0.5::\+contact_infected(X,T) :-  resistant(X), time(T).
+%infected(X, 0) :- initially_infected(X).
+%infected(X, T) :- time(T), T > 0, infected(X, T_prev), T_prev =:= T-1.
+%infected(X, T) :- time(T), bad_air_infection(X), infected(X, T_prev), T_prev =:= T-1.
+%infected(X, T) :- time(T), contact_infected(X, T).
+%
+%0.5::\+contact_infected(X,T) :-  resistant(X), time(T).
